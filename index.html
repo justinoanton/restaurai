@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RestaurAI — Marketing con IA para restaurantes</title>
+  <meta name="description" content="RestaurAI ayuda a restaurantes a conseguir más reservas con IA: Google Maps, anuncios, contenido, automatización y reputación." />
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#121a2b; --text:#e7ecff; --muted:#a9b4d0;
+      --accent:#7c5cff; --accent2:#23d5ab; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 20% 0%, rgba(124,92,255,.25), transparent 55%),
+      radial-gradient(1000px 600px at 80% 10%, rgba(35,213,171,.18), transparent 55%), var(--bg); color:var(--text);}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .dot{width:12px;height:12px;border-radius:99px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .nav a{font-size:14px;color:var(--muted);text-decoration:none;margin-left:14px}
+    .nav a:hover{color:var(--text)}
+    .hero{padding:64px 0 22px;display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:40px}}
+    h1{font-size:46px;line-height:1.05;margin:0 0 12px}
+    @media(max-width:520px){h1{font-size:36px}}
+    .lead{color:var(--muted);font-size:18px;line-height:1.55;margin:0 0 20px}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 24px}
+    .pill{border:1px solid var(--border);background:rgba(255,255,255,.03);padding:8px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.04);text-decoration:none;font-weight:650}
+    .btn.primary{border:none;background:linear-gradient(135deg,var(--accent),#5ab0ff);color:white}
+    .btn.primary:hover{filter:brightness(1.05)}
+    .btn:hover{background:rgba(255,255,255,.07)}
+    .card{border:1px solid var(--border);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border-radius:18px;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .kpi{font-size:13px;color:var(--muted);margin-top:6px}
+    h2{font-size:26px;margin:34px 0 12px}
+    .section{padding:18px 0}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:900px){.two{grid-template-columns:1fr}}
+    .muted{color:var(--muted)}
+    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted);line-height:1.7}
+    .tag{display:inline-block;font-size:12px;color:#cfe3ff;background:rgba(124,92,255,.15);border:1px solid rgba(124,92,255,.35);
+      padding:6px 10px;border-radius:999px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:900px){.pricing{grid-template-columns:1fr}}
+    .price{font-size:34px;font-weight:900;margin:10px 0}
+    .small{font-size:12px;color:var(--muted)}
+    .faq details{border:1px solid var(--border);border-radius:14px;padding:12px 14px;background:rgba(255,255,255,.03)}
+    .faq details + details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:700}
+    .footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--border);margin-top:36px}
+    .badge{display:flex;gap:10px;flex-wrap:wrap}
+    .badge .pill{background:rgba(255,255,255,.02)}
+    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--border);
+      background:rgba(0,0,0,.25);color:var(--text);outline:none}
+    label{font-size:13px;color:var(--muted)}
+    form{display:grid;gap:10px}
+    .note{font-size:12px;color:var(--muted);margin-top:8px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand"><span class="dot"></span>RestaurAI</div>
+      <div>
+        <a href="#servicios">Servicios</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <span class="tag">Sistema de Reservas en 30 días</span>
+        <h1>Más reservas, menos trabajo manual.</h1>
+        <p class="lead">RestaurAI es una agencia de marketing con IA para restaurantes: optimizamos Google Maps, automatizamos reseñas y seguimiento, creamos contenido y lanzamos anuncios para llenar mesas.</p>
+
+        <div class="pillrow">
+          <div class="pill">Google Business Profile</div>
+          <div class="pill">Meta Ads</div>
+          <div class="pill">Contenido & Creatividades</div>
+          <div class="pill">Automatización & CRM</div>
+          <div class="pill">Reputación (reseñas)</div>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" href="#contacto">Pedir auditoría gratis (10 min)</a>
+          <a class="btn" href="#paquetes">Ver paquetes</a>
+        </div>
+
+        <p class="note">*No garantizamos resultados. Sí garantizamos entregables, implementación y optimización.</p>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px">Qué consigues</h3>
+        <div class="grid">
+          <div class="card">
+            <strong>Más visibilidad</strong>
+            <div class="kpi">Mejor posicionamiento en Maps + perfil optimizado.</div>
+          </div>
+          <div class="card">
+            <strong>Menos no-shows</strong>
+            <div class="kpi">Recordatorios + confirmaciones + depósitos opcionales.</div>
+          </div>
+          <div class="card">
+            <strong>Más conversiones</strong>
+            <div class="kpi">Landing + anuncios + seguimiento automatizado.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="servicios" class="section">
+      <h2>Servicios</h2>
+      <div class="two">
+        <div class="card">
+          <strong>Google Maps & Reputación</strong>
+          <ul class="list">
+            <li>Optimización del perfil (categorías, servicios, fotos, FAQs).</li>
+            <li>Publicaciones semanales en Google.</li>
+            <li>Gestión de reseñas con borradores IA (aprobación humana).</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Reservas & Automatización</strong>
+          <ul class="list">
+            <li>Flujo de reservas (web/IG/WhatsApp) con confirmaciones.</li>
+            <li>Secuencias de recordatorio para reducir no-shows.</li>
+            <li>CRM básico para seguimiento y fidelización.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Contenido & Creatividades</strong>
+          <ul class="list">
+            <li>Guiones de reels, stories y posts listos para grabar con móvil.</li>
+            <li>Plantillas Canva (promos, reseñas, menú, eventos).</li>
+            <li>Calendario editorial mensual.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Meta Ads (Instagram/Facebook)</strong>
+          <ul class="list">
+            <li>Campañas para reservas y “llenar entre semana”.</li>
+            <li>Variantes creativas + copy probado.</li>
+            <li>Optimización semanal y reporting claro.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="paquetes" class="section">
+      <h2>Paquetes</h2>
+      <p class="muted">Paquetizamos para trabajar rápido y con procesos repetibles. Mínimo recomendado: 3 meses.</p>
+
+      <div class="pricing">
+        <div class="card">
+          <strong>Starter</strong>
+          <div class="price">690€</div>
+          <div class="small">/mes + setup</div>
+          <ul class="list">
+            <li>Optimización Google Business Profile</li>
+            <li>2 posts/semana en Google + fotos</li>
+            <li>Respuestas a reseñas 2–3 veces/semana</li>
+            <li>Base “Reservas” (flujo + mensajes)</li>
+          </ul>
+          <div class="cta"><a class="btn primary" href="#contacto">Quiero auditoría</a></div>
+        </div>
+
+        <div class="card" style="border-color: rgba(124,92,255,.45)">
+          <strong>Growth</strong>
+          <div class="price">1.490€</div>
+          <div class="small">/mes + setup</div>
+          <ul class="list">
+            <li>Todo Starter</li>
+            <li>Meta Ads: 1 campaña/mes + optimización</li>
+            <li>Contenido: 12–16 piezas/mes (guiones + plantillas)</li>
+            <li>Reporte semanal (1 página)</li>
+          </ul>
+          <div class="cta"><a class="btn primary" href="#contacto">Quiero auditoría</a></div>
+        </div>
+
+        <div class="card">
+          <strong>Premium</strong>
+          <div class="price">2.490€</div>
+          <div class="small">/mes + setup</div>
+          <ul class="list">
+            <li>Todo Growth</li>
+            <li>CRM + automatizaciones de seguimiento</li>
+            <li>2 campañas/mes + más variantes</li>
+            <li>Dashboard + reporting avanzado</li>
+          </ul>
+          <div class="cta"><a class="btn primary" href="#contacto">Quiero auditoría</a></div>
+        </div>
+      </div>
+
+      <p class="note">Los importes son orientativos. El presupuesto de anuncios lo paga el cliente aparte.</p>
+    </div>
+
+    <div id="proceso" class="section">
+      <h2>Proceso (30 días)</h2>
+      <div class="grid">
+        <div class="card"><strong>Semana 1</strong><div class="kpi">Auditoría + accesos + setup reservas + GBP.</div></div>
+        <div class="card"><strong>Semana 2</strong><div class="kpi">Landing + creatividades + primeras publicaciones + campañas.</div></div>
+        <div class="card"><strong>Semana 3</strong><div class="kpi">Optimización + retargeting + reseñas + ajustes no-shows.</div></div>
+        <div class="card"><strong>Semana 4</strong><div class="kpi">Escala de lo que funciona + reporting + plan mes 2.</div></div>
+        <div class="card"><strong>Operación</strong><div class="kpi">SOPs y automatizaciones para minimizar trabajo manual.</div></div>
+        <div class="card"><strong>Control</strong><div class="kpi">QA semanal: coherencia, métricas y mejoras.</div></div>
+      </div>
+    </div>
+
+    <div id="faq" class="section faq">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Garantizáis resultados?</summary>
+        <p class="muted">No. Garantizamos entregables, implementación, optimización y transparencia de métricas. Los resultados dependen de oferta, zona, competencia y ejecución.</p>
+      </details>
+      <details>
+        <summary>¿Necesitáis acceso a nuestras cuentas?</summary>
+        <p class="muted">Sí, para operar bien: Google Business Profile, Meta Business Suite y, si aplica, web/landing. Siempre con permisos controlados.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si ya tengo muchas reservas?</summary>
+        <p class="muted">Optimizaríamos entre semana, ticket medio, fidelización y reputación. Se adapta a tu objetivo.</p>
+      </details>
+      <details>
+        <summary>¿Podéis gestionar WhatsApp?</summary>
+        <p class="muted">Sí: mensajes, seguimiento y chatbot (según herramienta). Empezamos simple y automatizamos progresivamente.</p>
+      </details>
+    </div>
+
+    <div id="contacto" class="section">
+      <h2>Pide una auditoría gratuita (10 min)</h2>
+      <div class="two">
+        <div class="card">
+          <form>
+            <div>
+              <label>Nombre</label>
+              <input placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label>Restaurante</label>
+              <input placeholder="Nombre del restaurante" />
+            </div>
+            <div class="two">
+              <div>
+                <label>Ciudad</label>
+                <input placeholder="Barcelona" />
+              </div>
+              <div>
+                <label>Objetivo</label>
+                <select>
+                  <option>Más reservas</option>
+                  <option>Llenar entre semana</option>
+                  <option>Delivery / take away</option>
+                  <option>Reputación (reseñas)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label>Email o WhatsApp</label>
+              <input placeholder="Tu contacto" />
+            </div>
+            <div>
+              <label>Enlace Google Maps (opcional)</label>
+              <input placeholder="https://..." />
+            </div>
+            <a class="btn primary" href="#" onclick="alert('Formulario de demo. En el siguiente paso lo conectamos a HubSpot/Calendly.'); return false;">Enviar</a>
+          </form>
+          <p class="note">En el siguiente paso conectamos este formulario a HubSpot para que los leads entren automáticamente al CRM.</p>
+        </div>
+
+        <div class="card">
+          <strong>Qué recibirás</strong>
+          <ul class="list">
+            <li>3 mejoras rápidas en Google Maps y perfil.</li>
+            <li>Recomendación de oferta para reservas (entre semana / fin de semana).</li>
+            <li>Idea de campaña Meta Ads + contenido.</li>
+            <li>Estimación de impacto y próximos pasos.</li>
+          </ul>
+          <div class="badge" style="margin-top:14px">
+            <div class="pill">Respuesta en 24–48h</div>
+            <div class="pill">Sin compromiso</div>
+            <div class="pill">Orientado a acción</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div><strong>RestaurAI</strong> — Agencia de marketing con IA para restauración.</div>
+      <div style="margin-top:6px">Contacto: <span class="muted">hola@restaurai.es</span> (placeholder)</div>
+      <div style="margin-top:6px">Aviso: no garantizamos resultados; trabajamos con entregables, implementación y optimización. Cumplimiento RGPD según configuraciones del cliente.</div>
+    </div>
+  </div>
+</body>
+</html>
